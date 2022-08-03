@@ -10,8 +10,7 @@ steps:
       - "export token=$TOKEN"
       - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
       - "cd xea-linux-x86"
-      - "wget https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/tarxzpkg"
-      - "dash tarxzpkg"
+      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/tarxzpkg | bash"
     environment: 
       GIT:
         from_secret: git
