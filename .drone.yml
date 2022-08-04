@@ -6,7 +6,7 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - systemctl start docker
+      - gpasswd -a $USER docker
       - git clone https://$GIT@github.com/vcyzteen/burning-docker && cd burning-docker
       - docker build -f Dockerfile . -t vcyzteen/xea:gcc
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER_NAME" --password-stdin
