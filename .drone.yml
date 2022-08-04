@@ -6,11 +6,11 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - gpasswd -a $USER docker
-      - git clone https://$GIT@github.com/vcyzteen/burning-docker && cd burning-docker
-      - docker build -f Dockerfile . -t vcyzteen/xea:gcc
-      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER_NAME" --password-stdin
-      - docker push vcyzteen/xea:gcc
+      - "export git=$GIT"
+      - "export token=$TOKEN"
+      - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
+      - "cd xea-linux-x86"
+      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/debpkg | bash"
     environment: 
       GIT:
         from_secret: git
