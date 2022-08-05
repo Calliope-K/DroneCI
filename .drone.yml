@@ -8,7 +8,7 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "apt-get -y install perl kernel-headers bzip2 dkms"
+      - "apt-get -y install perl bzip2 dkms"
       - "git clone https://github.com/vcyzteen/xea.git --depth=1"
       - "cd xea"
       - "curl -s https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh | bash"
