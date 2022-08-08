@@ -11,6 +11,7 @@ steps:
       - "git clone https://git.codelinaro.org/clo/la/kernel/msm-4.4 -b aosp/upstream-master"
       - "cd msm-4.4"
       - "git checkout -b upstream"
+      - "git config --global --add url."git@github.com:".insteadOf "https://github.com/""
       - "git push --set-upstream https://$GIT@github.com/vcyzteen/xea-linux-android.git upstream"
     environment: 
       GIT:
