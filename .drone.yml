@@ -8,11 +8,9 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "git clone https://git.codelinaro.org/clo/la/kernel/msm-4.4 -b aosp/upstream-master"
-      - "cd msm-4.4"
-      - "git checkout -b upstream"
-      - git config --global --add url."git@github.com:".insteadOf "https://github.com/"
-      - "git push --set-upstream https://$GIT@github.com/vcyzteen/xea-linux-android.git upstream"
+      - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
+      - "cd xea-linux-x86"
+      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/debpkg | bash"
     environment: 
       GIT:
         from_secret: git
