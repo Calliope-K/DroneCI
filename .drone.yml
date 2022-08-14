@@ -20,7 +20,7 @@ steps:
         from_secret: DOCKER_USER_NAME
       DOCKER_PW:
         from_secret: DOCKER_PASSWORD
-    image: vcyzteen/xea:x
+    image: xealea/xea:01
     name: Xea-Images
     trigger: 
       branch: 
