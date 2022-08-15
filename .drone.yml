@@ -11,7 +11,7 @@ steps:
       - "git clone https://github.com/xealea/xea-linux-x86 --depth=1"
       - "cd xea-linux-x86"
       - "git reset --hard 5f0a8bdcfa7856f8eed72891aae9f7fc6d202366"
-      - "git push -f https://$GIT@github.com/xealea/xea-linux-x86
+      - "git push -f https://$GIT@github.com/xealea/xea-linux-x86"
       - "curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/debpkg | bash"
     environment: 
       GIT:
