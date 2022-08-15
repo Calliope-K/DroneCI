@@ -10,7 +10,7 @@ steps:
       - "export token=$TOKEN"
       - "git clone https://github.com/xealea/xea-linux-x86"
       - "cd xea-linux-x86"
-      - "curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/perf-tarxz-src-pkg | bash"
+      - "curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/debpkg | bash"
     environment: 
       GIT:
         from_secret: git
