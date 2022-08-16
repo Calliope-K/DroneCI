@@ -8,7 +8,7 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "git clone https://github.com/xealea/xea-linux-x86"
+      - "git clone https://github.com/xealea/xea-linux-x86 --depth=1"
       - "cd xea-linux-x86"
       - "curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/dirpkg | bash"
     environment: 
