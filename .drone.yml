@@ -16,7 +16,7 @@ steps:
       - mv /drone/src/x86-builder-gcc/gcc-mostlyportable-12.2.1-releases-gcc.12.2.0.r2.ga41243a75ff xeagcc/xea-xo1
       - cd xeagcc
       - git init
-      - git add . && git commit -m "xea: uploading my custom gcc" --signoff
+      - 'git add . && git commit -m "xea: uploading my custom gcc" --signoff'
       - git checkout -b x86_64
       - git push --set-upstream https://$GITHUB_TOKEN@github.com/xealea/toolchain-priv.git x86_64
     environment: 
