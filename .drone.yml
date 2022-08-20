@@ -11,7 +11,7 @@ steps:
       - "cd x86-builder-gcc"
       - "chmod +x mostlyportable-gcc.sh"
       - "./mostlyportable-gcc.sh gcc"
-      - "/drone/src/x86-builder-gcc/gcc-mostlyportable-12.2.1-releases-gcc.12.2.0.r2.ga41243a75ff/bin/gcc"
+      - "ls /drone/src/x86-builder-gcc/gcc-mostlyportable-12.2.1-releases-gcc.12.2.0.r2.ga41243a75ff/bin/gcc"
     environment: 
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
