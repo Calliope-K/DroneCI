@@ -4,11 +4,9 @@ git clone https://$GITHUB_TOKEN@github.com/xealea/x86-builder-gcc.git
 cd x86-builder-gcc
 chmod +x mostlyportable-gcc.sh
 ./mostlyportable-gcc.sh gcc
-ls x86-builder-gcc
-mkdir -p xeagcc
-cp -r /drone/src/x86-builder-gcc/gcc-mostlyportable-12.2.1-releases-gcc.12.2.0.r2.ga41243a75ff xeagcc/xea-xo1
-cd xeagcc
+ls xealea/xeagcc
+cd xealea/xeagcc
 git init
 git add . && git commit -m "xea: uploading my custom gcc" --signoff
-git checkout -b x86_64
-git push --set-upstream https://$GITHUB_TOKEN@github.com/xealea/toolchain-priv.git x86_64
+git checkout -b x86_64-xo1
+git push --set-upstream https://$GITHUB_TOKEN@github.com/xealea/toolchain-priv.git x86_64-xo1
