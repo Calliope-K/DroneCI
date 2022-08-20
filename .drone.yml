@@ -5,23 +5,21 @@ kind: pipeline
 name: XeaPipeline
 steps: 
   - 
-    commands:
-      - "export git=$GIT"
-      - "export token=$TOKEN"
+    commands: 
       - "apt-get -y install clang llvm bolt"
-      - "git clone https://github.com/xealea/x86-builder-gcc.git"
+      - "git clone https://$GITHUB_TOKEN@github.com/xealea/x86-builder-gcc.git"
       - "cd x86-builder-gcc"
       - "chmod +x mostlyportable-gcc.sh"
       - "./mostlyportable-gcc.sh gcc"
     environment: 
-      GIT:
-        from_secret: git
+      GITHUB_TOKEN:
+        from_secret: GH_TOKEN
+      GITLAB_TOKEN:
+        from_secret: GL_TOKEN
+      WGET_TOKEN:
+        from_secret: WG_TOKEN
       TOKEN: 
-        from_secret: token
-      DOCKER_USR:
-        from_secret: DOCKER_USER_NAME
-      DOCKER_PW:
-        from_secret: DOCKER_PASSWORD
+        from_secret: TG_TOKEN
     image: xealea/xea:01
     name: Xea-Images
     trigger: 
