@@ -1,12 +1,5 @@
 #!/bin/bash
-apt-get -y install clang llvm bolt libva-dev
-git clone https://$GITHUB_TOKEN@github.com/xealea/x86-builder-gcc.git
-cd x86-builder-gcc
-chmod +x mostlyportable-gcc.sh
-./mostlyportable-gcc.sh gcc
-ls xealea/xeagcc
-cd xealea/xeagcc
-git init
-git add . && git commit -m "xea: uploading my custom gcc" --signoff
-git checkout -b x86_64-xo1
-git push --set-upstream https://$GITHUB_TOKEN@github.com/xealea/toolchain-priv.git x86_64-xo1
+apt-get -y install clang llvm lld bolt libva-dev
+git clone https://github.com/xealea/xea-linux-x86.git --depth=1
+cd xea-linux-x86
+curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/debpkg | bash
