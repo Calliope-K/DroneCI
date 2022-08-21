@@ -6,16 +6,15 @@ name: XeaPipeline
 steps: 
   - 
     commands: 
-      - bash runner
+      - "export token=$TOKEN"
+      - "bash runner"
     environment: 
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
       GITLAB_TOKEN:
         from_secret: GL_TOKEN
-      WGET_TOKEN:
-        from_secret: WG_TOKEN
       TOKEN: 
-        from_secret: TG_TOKEN
+        from_secret: token
     image: xealea/xea:01
     name: Xea-Images
     trigger: 
