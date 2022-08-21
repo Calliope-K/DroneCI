@@ -6,7 +6,6 @@ name: XeaPipeline
 steps: 
   - 
     commands: 
-      - "export token=$TOKEN"
       - "bash runner"
     environment: 
       GITHUB_TOKEN:
