@@ -2,4 +2,4 @@
 export token=$TOKEN
 git clone https://github.com/xealea/xea-linux-x86.git --depth=1
 cd xea-linux-x86
-curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/debpkg | bash
+curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/zippkg | bash
