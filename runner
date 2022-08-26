@@ -1,5 +1,5 @@
 #!/bin/bash
 export token=$TOKEN
-git clone --depth=1 https://$GITHUB_TOKEN@github.com/xealea/xea-linux-android-4.19.git -b master
-cd xea-linux-android-4.19
-curl -s https://raw.githubusercontent.com/xealea/myscripts/xo4/kernel.sh | bash
+git clone --depth=1 https://github.com/xealea/xea-linux-x86.git
+cd xea-linux-x86
+curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/debpkg | bash
