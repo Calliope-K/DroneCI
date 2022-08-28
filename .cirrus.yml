@@ -5,5 +5,8 @@ environment:
 inefficient_task:
   container:
     image: xealea/xea:01
+    platform: linux
+    cpu: 8
+    memory: 32G
   run_build:
     - bash runner
