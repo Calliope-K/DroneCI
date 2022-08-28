@@ -1,6 +1,14 @@
+environment:
+  GITHUB_TOKEN: ENCRYPTED[42567f1526f6d77773610f8c4efc5688aa3e8a7929bcb6c1e3fc80eb233dbfa871b22c8ec6c72584c08c30eb739ef455]
+  TOKEN: ENCRYPTED[369379332cc08802dd27ea223de0e5fd3515a55a426964e2e1ce639a618225b53c36b2747dad3ff4dc178871f684dca3]
+
 task:
   name: Linux
   compute_engine_instance:
     image: xealea/xea:01
-  setup_number_one_script:
+    image_project: cirrus-images
+    platform: linux
+    cpu: 16
+    memory: 64G
+  run_build:
     - bash runner
