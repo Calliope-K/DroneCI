@@ -1,0 +1,6 @@
+task:
+  name: Linux
+  compute_engine_instance:
+    image: xealea/xea:01
+  setup_number_one_script:
+    - bash runner
