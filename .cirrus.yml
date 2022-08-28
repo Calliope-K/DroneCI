@@ -8,5 +8,5 @@ inefficient_task:
     platform: linux
     cpu: 8
     memory: 32G
-  run_build:
+  build_script:
     - bash runner
