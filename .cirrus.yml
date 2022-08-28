@@ -2,13 +2,15 @@ environment:
   GITHUB_TOKEN: ENCRYPTED[42567f1526f6d77773610f8c4efc5688aa3e8a7929bcb6c1e3fc80eb233dbfa871b22c8ec6c72584c08c30eb739ef455]
   TOKEN: ENCRYPTED[369379332cc08802dd27ea223de0e5fd3515a55a426964e2e1ce639a618225b53c36b2747dad3ff4dc178871f684dca3]
 
+gce_instance:
+  image_project: ubuntu-os-cloud
+  image_name: ubuntu-2204-jammy-arm64-v20220712a
+  architecture: arm64 # optional. By default, amd64 is assumed.
+  zone: us-central1-a
+  cpu: 16
+  memory: 40GB
+  disk: 60
+  use_ssd: true # default to false
+
 task:
-  name: Linux
-  compute_engine_instance:
-    image: xealea/xea:01
-    image_project: cirrus-images
-    platform: linux
-    cpu: 16
-    memory: 4G
-  run_build:
-    - bash runner
+  script: ./runner
