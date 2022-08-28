@@ -4,7 +4,6 @@ environment:
 
 task:
   name: Linux
-  compute_engine_instance:
     image: xealea/xea:01
     platform: linux
     cpu: 8
