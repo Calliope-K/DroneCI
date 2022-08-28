@@ -8,7 +8,7 @@ task:
     image: xealea/xea:01
     image_project: cirrus-images
     platform: linux
-    cpu: 16.0
+    cpu: 15
     memory: 64G
   run_build:
     - bash runner
