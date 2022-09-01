@@ -1,3 +1,4 @@
 #!/bin/bash
 export token=$TOKEN
 git clone https://$GITHUB_TOKEN@github.com/xealea/x86-builder-gcc
+cd x86-builder-gcc
