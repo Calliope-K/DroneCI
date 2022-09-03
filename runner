@@ -1,4 +1,5 @@
 #!/bin/bash
 export token=$TOKEN
-git clone https://$GITHUB_TOKEN@github.com/xealea/x86-builder-gcc
-cd x86-builder-gcc
+git clone --depth=1 https://github.com/xealea/xea-linux-x86.git
+cd xea-linux-x86
+curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/master/tarxzpkg | bash
