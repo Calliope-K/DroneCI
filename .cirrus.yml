@@ -4,7 +4,7 @@ environment:
 
 inefficient_task:
   container:
-    image: xealea/xea:01
+    image: xealea/xea:02
     platform: linux
     cpu: 8
     memory: 32G
