@@ -9,7 +9,7 @@ inefficient_task:
     cpu: 8
     memory: 32G
   build_script:
-    - chmod x+ 01
+    - chmod +x 01
     - bash 01
 
 inefficient_task:
@@ -19,5 +19,5 @@ inefficient_task:
     cpu: 8
     memory: 32G
   build_script:
-    - chmod x+ 02
+    - chmod +x 02
     - bash 02
