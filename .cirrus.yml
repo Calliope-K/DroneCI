@@ -9,7 +9,11 @@ inefficient_task:
     cpu: 8
     memory: 32G
   build_script:
-    - export token=$TOKEN; git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1; cd xea-linux-laptop-x86; curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/debpkg | bash
+    - apt-get -y install git curl
+    - export token=$TOKEN
+    - git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1
+    - cd xea-linux-laptop-x86
+    - curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/debpkg | bash
  
 inefficient_task:
   container:
@@ -18,4 +22,8 @@ inefficient_task:
     cpu: 8
     memory: 32G
   build_script:
-    - export token=$TOKEN; git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1; cd xea-linux-laptop-x86; curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/tarzstpkg | bash
+    - apt-get -y install git curl
+    - export token=$TOKEN
+    - git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1
+    - cd xea-linux-laptop-x86
+    - curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/tarzstpkg | bash
