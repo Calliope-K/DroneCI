@@ -1,6 +1,0 @@
-#!/bin/bash
-export token=$TOKEN
-git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1
-cd xea-linux-laptop-x86
-curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/tarxzpkg | bash
-
