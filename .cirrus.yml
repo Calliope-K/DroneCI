@@ -8,14 +8,20 @@ inefficient_task:
     platform: linux
     cpu: 8
     memory: 32G
-  build_kernel_deb:
+  build_script:
     - export token=$TOKEN
     - git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1
     - cd xea-linux-laptop-x86
     - curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/debpkg | bash
-  build_kernel_tarzst:
+ 
+inefficient_task:
+  container:
+    image: xealea/xea:02
+    platform: linux
+    cpu: 8
+    memory: 32G
+  build_script:
     - export token=$TOKEN
     - git clone --depth=1 https://github.com/xealea/xea-linux-laptop-x86 -b 6.1
     - cd xea-linux-laptop-x86
     - curl -s https://raw.githubusercontent.com/xealea/builder-kernel-x86/clang/tarzstpkg | bash
-
