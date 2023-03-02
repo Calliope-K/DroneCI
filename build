@@ -1,5 +1,9 @@
 #!/bin/bash
 export token=$TOKEN
+export TYPE=STABLE
+export DEVICE=munch
+export KBUILD_BUILD_USER=TLinux
+export KBUILD_BUILD_HOST=LLC
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/TMunch-Kernel -b TS
 cd TMunch-Kernel
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/scripts-build
