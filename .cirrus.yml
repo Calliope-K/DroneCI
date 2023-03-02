@@ -4,7 +4,6 @@ environment:
   BOT_API_KEY: ENCRYPTED[369379332cc08802dd27ea223de0e5fd3515a55a426964e2e1ce639a618225b53c36b2747dad3ff4dc178871f684dca3]
   PD_API_KEY: ENCRYPTED[ef22e868b09b1c4ef6c1e584af63dec140bfd829f5108a692de9121197859d475cd56206e167cc4b7c61e0182da81dfd]
 
-
 inefficient_task:
   container:
     image: xealea/xea:02
