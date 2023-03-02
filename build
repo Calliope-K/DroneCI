@@ -13,3 +13,4 @@ chmod +x setup
 chmod +x build
 ./setup --aosp-clang
 ./build --aosp-clang --lto
+#
