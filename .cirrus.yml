@@ -10,14 +10,5 @@ inefficient_task:
     memory: 32G
   build_script:
     - chmod +x 01
-    - bash 01
+    - bash build
 
-inefficient_task:
-  container:
-    image: xealea/xea:02
-    platform: linux
-    cpu: 8
-    memory: 32G
-  build_script:
-    - chmod +x 02
-    - bash 02
