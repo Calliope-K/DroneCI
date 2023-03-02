@@ -9,6 +9,6 @@ inefficient_task:
     cpu: 8
     memory: 32G
   build_script:
-    - chmod +x 01
+    - chmod +x build
     - bash build
 
