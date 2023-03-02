@@ -8,5 +8,7 @@ git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/TMunch-Kernel -b 
 cd TMunch-Kernel
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/scripts-build
 cd scripts-build
-./setup
-./build
+chmod +x setup
+chmod +x build
+./setup --aosp-clang
+./build --aosp-clang --lto
