@@ -1,16 +1,18 @@
 #!/bin/bash
 export token=$TOKEN
 export CI_CHANNEL_ID=-1001721818658
-export TYPE=STABLE
-export DEVICE=munch
+#export TYPE=STABLE
+#export DEVICE=munch
 export KBUILD_BUILD_USER=TLinux
 export KBUILD_BUILD_HOST=LLC
-git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/TMunch-Kernel -b TS
-cd TMunch-Kernel
+#git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/TMunch-Kernel -b TS
+#cd TMunch-Kernel
+git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/TLinux-Kernel
+cd TLinux-Kernel
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/Tea-Droid/scripts-build
-cd scripts-build
-chmod +x setup
-chmod +x build
-./setup --aosp-clang
-./build --aosp-clang --lto
-#
+cd scripts-build/x86
+#chmod +x setup
+#chmod +x build
+#./setup --aosp-clang
+#./build --aosp-clang --lto
+./build
