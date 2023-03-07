@@ -1,0 +1,19 @@
+--- 
+clone: 
+  depth: 1
+kind: pipeline
+name: XeaPipeline
+steps: 
+  - 
+    commands: 
+      - "bash build"
+    environment: 
+      GITHUB_TOKEN:
+        from_secret: gh
+      BOT_API_KEY:
+        from_secret: bot
+    image: xealea/xea:02
+    name: Xea-Images
+    trigger: 
+      branch: 
+        - master
