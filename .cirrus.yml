@@ -6,8 +6,6 @@ environment:
 
 task:
   name: Build
-  depends_on:
-    - build
   timeout_in: 4h
   persistent_worker:
     labels:
