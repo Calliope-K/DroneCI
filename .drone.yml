@@ -2,7 +2,7 @@
 clone: 
   depth: 1
 kind: pipeline
-name: XeaPipeline
+name: lea
 steps: 
   - 
     commands: 
@@ -15,7 +15,8 @@ steps:
       TOKEN: 
         from_secret: token
     image: xealea/xea:02
-    name: Xea-Images
+    name: lea-build
     trigger: 
       branch: 
         - master
+
